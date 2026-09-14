@@ -1,5 +1,5 @@
 import { Layout } from "@/components/Layout";
-import { Mail, Phone, Instagram } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 
 const Contact = () => {
   return (
@@ -20,33 +20,23 @@ const Contact = () => {
             {/* Contact Info */}
             <div className="space-y-6 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
               <a
-                href="mailto:hello@jordanstudio.com"
+                href="mailto:tomislav.matic13@gmail.com"
                 className="flex items-center gap-4 text-lg hover-highlight group"
               >
                 <Mail size={20} className="text-muted-foreground group-hover:text-accent transition-colors" />
-                <span>hello@jordanstudio.com</span>
-              </a>
-
-              <a
-                href="https://instagram.com/jordanstudio"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-4 text-lg hover-highlight group"
-              >
-                <Instagram size={20} className="text-muted-foreground group-hover:text-accent transition-colors" />
-                <span>@jordanstudio</span>
+                <span>tomislav.matic13@gmail.com</span>
               </a>
 
               <div className="flex items-center gap-4 text-lg text-muted-foreground">
                 <Phone size={20} />
-                <span>+55 11 9999-9999</span>
+                <span>+385 98843641</span>
               </div>
             </div>
 
             {/* Location */}
             <div className="animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
               <p className="text-label mb-2">Based in</p>
-              <p className="text-lg">São Paulo, Brazil</p>
+              <p className="text-lg">Zagreb, Croatia</p>
             </div>
           </div>
 
