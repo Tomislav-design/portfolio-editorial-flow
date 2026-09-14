@@ -45,9 +45,12 @@ export const projects: Project[] = [
       "A complete landing page for a three-day business conference, designed from scratch for a youthful, mixed audience. The direction balances corporate clarity with visionary energy across the hero, speakers, agenda, registration, upcoming events, and footer.",
     detailLine: "Sept 15–17, 2024 · Downtown Conference Center, NYC",
     solvedHeading: "A complete visual language, built for momentum.",
-    coverImage: summitArtwork.url,
-    images: [summitArtwork.url],
-    imageAlts: ["Future Leaders Summit 2024 complete desktop landing page"],
+    coverImage: summitHero.url,
+    images: [summitHero.url, summitSpeakers.url],
+    imageAlts: [
+      "Future Leaders Summit 2024 hero with speaker filmstrip, headline, and event details",
+      "Future Leaders Summit 2024 keynote speakers section with numbered speaker cards",
+    ],
     sections: [
       {
         title: "Brand & identity",
