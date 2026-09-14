@@ -19,7 +19,7 @@ const About = () => {
             
             <div className="space-y-6 text-lg md:text-xl leading-relaxed text-muted-foreground animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
               <p>
-                <span className="text-foreground">Jordan Studio</span> is an independent creative 
+                <span className="text-foreground">Tomislav</span> is an independent creative 
                 studio specializing in brand identity, illustration, and visual design.
               </p>
               <p>

@@ -17,8 +17,8 @@ export function Footer({ variant = "default" }: FooterProps) {
             <div className="space-y-3">
               <p className="text-label">Location</p>
               <div className="text-sm text-foreground space-y-1">
-                <p>São Paulo, SP</p>
-                <p>Brazil</p>
+                <p>Zagreb</p>
+                <p>Croatia</p>
               </div>
             </div>
 
@@ -36,10 +36,10 @@ export function Footer({ variant = "default" }: FooterProps) {
             <div className="space-y-3">
               <p className="text-label">Contact</p>
               <div className="text-sm text-foreground space-y-1">
-                <a href="mailto:hello@jordanstudio.com" className="block hover:text-accent transition-colors">
-                  hello@jordanstudio.com
+                <a href="mailto:tomislav.matic13@gmail.com" className="block hover:text-accent transition-colors">
+                  tomislav.matic13@gmail.com
                 </a>
-                <p>+55 11 9999-9999</p>
+                <p>+385 98843641</p>
               </div>
             </div>
 
@@ -77,7 +77,7 @@ export function Footer({ variant = "default" }: FooterProps) {
         <div className="flex flex-col md:flex-row justify-between gap-8">
           {/* Left */}
           <div className="space-y-4">
-            <p className="font-display text-xl font-semibold">Jordan Studio</p>
+            <p className="font-display text-xl font-semibold">Tomislav</p>
             <p className="text-muted-foreground text-sm">
               Design & Illustration
             </p>
@@ -92,8 +92,8 @@ export function Footer({ variant = "default" }: FooterProps) {
 
           {/* Right */}
           <div className="text-sm text-muted-foreground">
-            <p>© {currentYear} Jordan Studio</p>
-            <p className="mt-1">São Paulo, Brazil</p>
+            <p>© {currentYear} Tomislav</p>
+            <p className="mt-1">Zagreb, Croatia</p>
           </div>
         </div>
       </div>
