@@ -1,71 +1,62 @@
-import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/Layout";
 import { projects } from "@/data/projects";
 
 const Index = () => {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const containerRef = useRef<HTMLDivElement>(null);
-
   const featuredProject = projects[0];
-
-  const handleMouseMove = (e: React.MouseEvent) => {
-    if (!containerRef.current) return;
-    
-    const rect = containerRef.current.getBoundingClientRect();
-    const centerX = rect.width / 2;
-    const centerY = rect.height / 2;
-    
-    // Calculate offset from center (normalized to -1 to 1)
-    const x = (e.clientX - rect.left - centerX) / centerX;
-    const y = (e.clientY - rect.top - centerY) / centerY;
-    
-    setMousePosition({ x, y });
-  };
 
   return (
     <Layout hideFooter noPadding>
-      <section 
-        ref={containerRef}
-        onMouseMove={handleMouseMove}
-        className="relative h-screen overflow-hidden"
-      >
+      <section className="relative h-screen overflow-hidden bg-background">
+        {/* Subtle radial glow for depth — no photographic background */}
         <div
-          className="absolute inset-0 flex items-center justify-center transition-transform duration-700 ease-out"
+          className="absolute inset-0 -z-10"
           style={{
-            transform: `translate(${-mousePosition.x * 40}px, ${-mousePosition.y * 40}px)`,
+            background:
+              "radial-gradient(circle at 50% 40%, hsl(0 0% 10%) 0%, hsl(0 0% 0%) 65%)",
           }}
-        >
-          {featuredProject && (
-            <img
-              src={featuredProject.coverImage}
-              alt="Future Leaders Summit 2024 website design"
-              className="h-[118%] w-[118%] object-cover object-top opacity-60"
-            />
-          )}
+        />
+
+        {/* Top-left accent */}
+        <div className="absolute top-8 md:top-12 left-6 md:left-12 z-10">
+          <span className="text-label text-muted-foreground">
+            Zagreb, Croatia
+          </span>
         </div>
 
-        {/* Overlay for better text readability */}
-        <div className="absolute inset-0 bg-background/30" />
-
+        {/* Centered name + featured project link */}
         <div className="absolute inset-0 flex items-center justify-center z-10">
-          <div className="text-center">
-            <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-display font-bold tracking-tight text-foreground">
+          <div className="text-center px-6">
+            <h1
+              className="text-6xl sm:text-8xl md:text-9xl lg:text-[10rem] font-serif font-light tracking-tight text-foreground"
+              style={{ textShadow: "0 8px 40px rgba(0, 0, 0, 0.45)" }}
+            >
               Tomislav
             </h1>
             {featuredProject && (
-              <Link to={`/work/${featuredProject.id}`} className="mt-6 inline-block text-sm uppercase tracking-widest link-underline">
+              <Link
+                to={`/work/${featuredProject.id}`}
+                className="mt-8 inline-block text-sm uppercase tracking-widest link-underline text-muted-foreground hover:text-foreground transition-colors"
+              >
                 View featured project
               </Link>
             )}
           </div>
         </div>
 
-        {/* Bio - Bottom Left */}
+        {/* Bio — bottom left */}
         <div className="absolute bottom-8 md:bottom-12 left-6 md:left-12 z-10 max-w-xs md:max-w-sm">
-          <p className="text-sm md:text-base font-sans text-foreground/80 leading-relaxed">
+          <div className="mb-4 h-px w-8 bg-foreground/30" />
+          <p className="text-sm md:text-base font-sans text-foreground/90 leading-relaxed">
             Hi! I'm Tomislav, an independent artist and designer based in Zagreb, Croatia, specializing in brand identity, illustration, and visual design. I help brands tell their stories through thoughtful, distinctive creative work.
           </p>
+        </div>
+
+        {/* Bottom-right accent */}
+        <div className="absolute bottom-8 md:bottom-12 right-6 md:right-12 z-10 hidden sm:block">
+          <span className="text-label text-muted-foreground">
+            Available for projects
+          </span>
         </div>
       </section>
     </Layout>
