@@ -1,4 +1,5 @@
-import summitArtwork from "@/assets/future-leaders-summit.png.asset.json";
+import summitHero from "@/assets/future-leaders-hero.png.asset.json";
+import summitSpeakers from "@/assets/future-leaders-speakers.png.asset.json";
 import energiHero from "@/assets/energi-hero.jpg.asset.json";
 import energiProductPage from "@/assets/energi-product-page.jpg.asset.json";
 import capturrHero from "@/assets/capturr-hero.jpg.asset.json";

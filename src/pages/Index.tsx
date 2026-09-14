@@ -17,13 +17,6 @@ const Index = () => {
           }}
         />
 
-        {/* Top-left accent */}
-        <div className="absolute top-8 md:top-12 left-6 md:left-12 z-10">
-          <span className="text-label text-muted-foreground">
-            Zagreb, Croatia
-          </span>
-        </div>
-
         {/* Centered name + featured project link */}
         <div className="absolute inset-0 flex items-center justify-center z-10">
           <div className="text-center px-6">
