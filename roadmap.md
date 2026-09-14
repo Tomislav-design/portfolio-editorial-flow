@@ -5,3 +5,6 @@
 - [x] Update home and About content for the real project
 - [x] Remove sample artwork
 - [x] Verify desktop and mobile presentation
+- [x] Add ENERGi as the second portfolio case study
+- [x] Add both ENERGi project visuals
+- [x] Verify ENERGi on desktop and mobile

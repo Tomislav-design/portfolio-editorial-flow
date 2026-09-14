@@ -55,26 +55,31 @@ const Project = () => {
               {project.description}
             </p>
             <p className="mt-8 text-sm uppercase tracking-widest text-foreground">
-              Sept 15–17, 2024 · Downtown Conference Center, NYC
+              {project.detailLine}
             </p>
           </div>
         </div>
       </section>
 
       <section className="container-wide pb-20 md:pb-32">
-        <div className="mx-auto max-w-5xl overflow-hidden border border-separator bg-card">
-          <img
-            src={project.images[0]}
-            alt={`${project.title} complete desktop landing page`}
-            className="h-auto w-full"
-          />
+        <div className="mx-auto max-w-5xl space-y-8 md:space-y-12">
+          {project.images.map((image, index) => (
+            <figure key={image} className="overflow-hidden border border-separator bg-card">
+              <img
+                src={image}
+                alt={project.imageAlts[index] ?? `${project.title} project artwork`}
+                className="h-auto w-full"
+                loading={index === 0 ? "eager" : "lazy"}
+              />
+            </figure>
+          ))}
         </div>
       </section>
 
       <section className="border-y border-separator">
         <div className="container-wide py-20 md:py-32">
           <p className="text-label mb-6">Solved</p>
-          <h2 className="text-headline max-w-3xl">A complete visual language, built for momentum.</h2>
+          <h2 className="text-headline max-w-3xl">{project.solvedHeading}</h2>
           <div className="mt-16 grid gap-x-12 gap-y-14 md:grid-cols-2 lg:grid-cols-3">
             {project.sections.map((section, index) => (
               <article key={section.title} className="border-t border-separator pt-6">
