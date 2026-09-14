@@ -1,6 +1,9 @@
 import summitArtwork from "@/assets/future-leaders-summit.png.asset.json";
 import energiHero from "@/assets/energi-hero.jpg.asset.json";
 import energiProductPage from "@/assets/energi-product-page.jpg.asset.json";
+import capturrHero from "@/assets/capturr-hero.jpg.asset.json";
+import capturrPortfolio from "@/assets/capturr-portfolio.png.asset.json";
+import capturrFooter from "@/assets/capturr-footer.png.asset.json";
 
 export interface ProjectSection {
   title: string;
@@ -168,5 +171,87 @@ export const projects: Project[] = [
     ],
     outcome:
       "An end-to-end brand system—from name, wordmark and 3D product to a complete localized shopping experience—showing how distinctive visual storytelling, cross-tool production and responsible product communication can work as one cohesive launch-ready concept.",
+  },
+  {
+    id: "capturr-photography-studio",
+    title: "CAPTURR® — Photography Studio",
+    category: "Brand identity & editorial photography website",
+    tags: ["BRAND IDENTITY", "WEB DESIGN"],
+    year: "2026",
+    client: "CAPTURR® Photography Studio",
+    role: "End-to-end brand & web design",
+    tools: ["Figma", "HTML", "CSS"],
+    description:
+      "A brand identity and single-page editorial website for a Zagreb portrait, lifestyle, wedding and commercial photography studio. The experience showcases the work, communicates an artistic point of view, and turns interest into bookings without falling into familiar wedding-boutique, dark-tech or newspaper-inspired conventions.",
+    detailLine: "Zagreb, Croatia · Identity · Design system · UX/UI · Prototyping",
+    solvedHeading: "The frame CAPTURR chooses to keep.",
+    coverImage: capturrHero.url,
+    images: [capturrHero.url, capturrPortfolio.url, capturrFooter.url],
+    imageAlts: [
+      "CAPTURR photography studio homepage with viewfinder wordmark and editorial photo strip",
+      "CAPTURR portfolio section showing wedding, pregnancy, brand, and portrait photography",
+      "CAPTURR contact footer with oversized typography and a 50mm camera lens replacing the letter O",
+    ],
+    sections: [
+      {
+        title: "The viewfinder idea",
+        description:
+          "Built the identity around four corner brackets: the frame CAPTURR chooses to keep. The viewfinder mark frames photography, headings and the wordmark, turning selection—not merely capture—into the studio’s defining idea.",
+      },
+      {
+        title: "Photographic neutral + cyanotype",
+        description:
+          "Cool paper and ink neutrals let warm portraits and commercial work coexist without the interface competing with the image. Cyanotype blue, drawn from one of photography’s oldest processes, is the single accent connecting traditional craft with a modern finish.",
+      },
+      {
+        title: "Editorial type system",
+        description:
+          "Paired Schibsted Grotesk Bold for confident headlines, Libre Franklin for clear editorial body copy and UI, and DM Mono for frame numbers, labels and EXIF-style details. Three families create one disciplined hierarchy.",
+      },
+      {
+        title: "Logo & photography direction",
+        description:
+          "Created horizontal, reversed, icon and stacked stamp lockups, including a cyanotype center dot and outlined vector delivery. Photography uses cyanotype-leaning shadows, true skin tones, soft key light, deep falloff, tight off-center crops, negative space and restrained film grain.",
+      },
+      {
+        title: "Hero & approach",
+        description:
+          "Activated the hero’s negative space with mono studio labels, a viewfinder-framed CAPTURR® stamp and a film-strip grid that dissolves into paper. The three-part manifesto—We read you, We shape your light, We keep the frame—translates the artistic method into client language.",
+      },
+      {
+        title: "Portfolio & services",
+        description:
+          "Designed a featured shoot, six-category filter and labeled thumbnail contact sheet, separated from adjacent photography by a paper-fade seam. A centered services carousel combines imagery, rich descriptions, practical inclusions and clear quote and portfolio actions.",
+      },
+      {
+        title: "Contact, menu & motion",
+        description:
+          "The contact collage turns photo-filled letters into viewfinder windows, layering labeled, rotated images around booking details. A dark six-category overlay, fade seams, cover-flow motion and considered hover states extend the identity through interaction.",
+      },
+      {
+        title: "The closing frame",
+        description:
+          "A giant GET IN TOUCH footer replaces the O with a native 50mm f/1.4 lens built from concentric barrel, focus and aperture rings, cyanotype glass and a specular highlight. Link columns, local time and back-to-top complete the story the viewfinder opened.",
+      },
+      {
+        title: "System & handoff",
+        description:
+          "Structured ten text styles, eight color tokens and reusable marks, lockups, buttons, chips, cards and rows as native Figma variables and components. HTML/CSS mockups document interaction, leaving the full experience ready for Webflow or custom front-end development.",
+      },
+    ],
+    skills: [
+      "Brand identity",
+      "Design system architecture",
+      "Typography hierarchy",
+      "Editorial art direction",
+      "UX composition",
+      "Micro-interactions",
+      "Duotone treatment",
+      "Icon systems",
+      "Responsive design",
+      "Case-study writing",
+    ],
+    outcome:
+      "A photography studio identity and website that feels neither wedding-boutique nor tech-flat. Cool photographic neutrals, one ownable cyanotype accent, recurring viewfinder brackets, mono labels and duotone imagery make every section feel edited rather than assembled—and ready to convert enquiries into bookings.",
   },
 ];
