@@ -7,4 +7,4 @@
 - [x] Verify desktop and mobile presentation
 - [x] Add ENERGi as the second portfolio case study
 - [x] Add both ENERGi project visuals
-- [ ] Verify ENERGi on desktop and mobile
+- [x] Verify ENERGi on desktop and mobile
