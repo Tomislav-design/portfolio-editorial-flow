@@ -10,4 +10,4 @@
 - [x] Verify ENERGi on desktop and mobile
 - [x] Add CAPTURR® as the third portfolio case study
 - [x] Add all three CAPTURR® project visuals
-- [ ] Verify CAPTURR® on desktop and mobile
+- [x] Verify CAPTURR® on desktop and mobile
