@@ -5,14 +5,15 @@ import { projects } from "@/data/projects";
 const Work = () => {
   return (
     <Layout showEchelonFooter>
-      {/* Header */}
       <section className="container-wide pt-16 md:pt-24 pb-16 md:pb-20">
         <h1 className="font-display text-6xl md:text-8xl lg:text-9xl font-bold tracking-tight">
-          Projects
+          Selected work
         </h1>
+        <p className="mt-6 max-w-xl text-lg text-muted-foreground">
+          Brand identity, design systems, and digital experiences shaped from first direction to final handoff.
+        </p>
       </section>
 
-      {/* Project List */}
       <section className="pb-24">
         {projects.map((project, index) => (
           <ProjectListItem
