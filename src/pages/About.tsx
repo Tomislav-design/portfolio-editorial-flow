@@ -1,13 +1,5 @@
 import { Layout } from "@/components/Layout";
 
-const clients = [
-  "Gallery Moderne",
-  "Tech Futures Lab",
-  "Bloom Publishing",
-  "Vogue Italia",
-  "Heritage Museum",
-];
-
 const About = () => {
   return (
     <Layout showEchelonFooter>
@@ -34,23 +26,18 @@ const About = () => {
             </div>
           </div>
 
-          {/* Selected Clients */}
           <div className="animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-            <h2 className="text-label mb-6">Selected Clients</h2>
-            <ul className="space-y-3">
-              {clients.map((client) => (
-                <li key={client} className="text-lg">
-                  {client}
-                </li>
-              ))}
-            </ul>
+              <h2 className="text-label mb-6">Approach</h2>
+              <p className="text-lg leading-relaxed">
+                From initial art direction to responsive handoff, I build clear visual systems that connect brand, content, and interaction.
+              </p>
           </div>
 
           {/* Experience */}
           <div className="animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
             <h2 className="text-label mb-6">Expertise</h2>
             <div className="flex flex-wrap gap-3">
-              {["Brand Identity", "Illustration", "Editorial", "Visual Design", "Art Direction", "Motion"].map((area) => (
+              {["Brand Identity", "Web Design", "Design Systems", "Responsive Design", "Art Direction", "SEO Copy"].map((area) => (
                 <span
                   key={area}
                   className="text-sm border border-border px-4 py-2"

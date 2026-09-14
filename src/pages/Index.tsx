@@ -1,4 +1,5 @@
-import { useState, useRef } from "react";
+import { useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import { Layout } from "@/components/Layout";
 import { projects } from "@/data/projects";
 
@@ -6,8 +7,7 @@ const Index = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // Get 8 unique cover images from projects for the grid (4x2)
-  const gridImages = projects.slice(0, 8).map(p => p.coverImage);
+  const featuredProject = projects[0];
 
   const handleMouseMove = (e: React.MouseEvent) => {
     if (!containerRef.current) return;
@@ -30,37 +30,35 @@ const Index = () => {
         onMouseMove={handleMouseMove}
         className="relative h-screen overflow-hidden"
       >
-        {/* Image Grid Background with Parallax - 4 columns x 2 rows */}
-        <div 
+        <div
           className="absolute inset-0 flex items-center justify-center transition-transform duration-700 ease-out"
           style={{
             transform: `translate(${-mousePosition.x * 40}px, ${-mousePosition.y * 40}px)`,
           }}
         >
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10 p-12 md:p-16 w-full max-w-7xl">
-            {gridImages.map((image, index) => (
-              <div 
-                key={index}
-                className="aspect-[3/4] overflow-hidden"
-              >
-                <img
-                  src={image}
-                  alt=""
-                  className="w-full h-full object-cover opacity-60"
-                />
-              </div>
-            ))}
-          </div>
+          {featuredProject && (
+            <img
+              src={featuredProject.coverImage}
+              alt="Future Leaders Summit 2024 website design"
+              className="h-[118%] w-[118%] object-cover object-top opacity-60"
+            />
+          )}
         </div>
 
         {/* Overlay for better text readability */}
         <div className="absolute inset-0 bg-background/30" />
 
-        {/* Centered Title - Overlaid */}
         <div className="absolute inset-0 flex items-center justify-center z-10">
-          <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-display font-bold tracking-tight text-foreground">
-            Tomislav
-          </h1>
+          <div className="text-center">
+            <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-display font-bold tracking-tight text-foreground">
+              Tomislav
+            </h1>
+            {featuredProject && (
+              <Link to={`/work/${featuredProject.id}`} className="mt-6 inline-block text-sm uppercase tracking-widest link-underline">
+                View featured project
+              </Link>
+            )}
+          </div>
         </div>
 
         {/* Bio - Bottom Left */}
