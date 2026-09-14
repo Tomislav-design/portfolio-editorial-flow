@@ -8,3 +8,6 @@
 - [x] Add ENERGi as the second portfolio case study
 - [x] Add both ENERGi project visuals
 - [x] Verify ENERGi on desktop and mobile
+- [x] Add CAPTURR® as the third portfolio case study
+- [x] Add all three CAPTURR® project visuals
+- [x] Verify CAPTURR® on desktop and mobile
